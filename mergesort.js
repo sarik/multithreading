@@ -40,7 +40,7 @@ function mergeSort(arr, l, r) {
   mergeSort(arr, mid + 1, r);
 
   merge(arr, l, mid + 1, r);
-}
+}git
 
 let arr = [5, 4, 3, 2, 1];
 mergeSort(arr, 0, arr.length - 1);
