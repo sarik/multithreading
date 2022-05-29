@@ -32,4 +32,4 @@ function genSeq(i, n, curr) {
 }
 
 genSeq(0, A.length, []);
-console.log(ans);
+//console.log(ans);
