@@ -36,6 +36,7 @@ function getPath(i, j, A, emptyCells, count, curr) {
     let lefttemp = A[i + 1][j];
     ans += getPath(i + 1, j, A, emptyCells, ++count, [...curr, "down"]);
     //after done with down side, make sure to revert it back to unvisited
+    //NOTE:In down traversal,code will make it visited
     A[i + 1][j] = lefttemp;
   }
 
