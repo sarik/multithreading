@@ -1,14 +1,14 @@
-/*let A = [
+let A = [
   [1, 0, 0, 0],
   [0, 0, 0, 0],
   [0, 0, 2, -1],
-];*/
-
+];
+/*
 let A = [
   [2, -1],
   [0, 0],
   [-1, 1],
-];
+];*/
 
 function getPath(i, j, A, emptyCells, count, curr) {
   console.log(i, j);
