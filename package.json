@@ -1,0 +1,23 @@
+{
+  "name": "scaler",
+  "version": "1.0.0",
+  "description": "Scaler problems",
+  "main": "allPaths.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node coingecko.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarik/scaler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarik/scaler/issues"
+  },
+  "homepage": "https://github.com/sarik/scaler#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.6"
+  }
+}
