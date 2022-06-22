@@ -1,7 +1,7 @@
 function genAllSeq(question, left, right, i, curr) {
   if (i === question * 2) {
     if (left === right) {
-      //console.log(curr);
+      console.log(curr);
       return 1;
     } else return 0;
   } else if (right > left) {
@@ -38,14 +38,12 @@ console.log(genAllSeq(A, 0, 0, 0, ""));
 
 console.log(catalane(A));
 
-A = 14;
+/*A = 14;
 console.log(genAllSeq(A, 0, 0, 0, ""));
 
 console.log(catalane(A));
 
 
 A = 519;
-console.log(catalane(A));
+console.log(catalane(A));*/
 //console.log(genAllSeq(A, 0, 0, 0, ""));
-
-
