@@ -5,7 +5,8 @@
   "main": "allPaths.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node coingecko.js"
+    "dev": "node coingecko.js",
+    "wei": "node wei.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/sarik/scaler#readme",
   "dependencies": {
-    "node-fetch": "^2.6.6"
+    "node-fetch": "^2.6.6",
+    "web3": "^1.7.4"
   }
 }
