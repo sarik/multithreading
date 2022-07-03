@@ -99,7 +99,7 @@ while (ans.length < A.length) {
     console.log(A[i + 1] + B[j], "pushing", i + 1 + "::" + j);
   }
 
-  if (!map.has(i + "::" + (j + 1))) {
+  if (!armap.has(i + "::" + (j + 1))) {
     //continue;
     //else
     map.set(i + "::" + (j + 1), 1);
