@@ -50,3 +50,21 @@ let trie = new Node();
 setup(input);
 
 console.log(isInDict("bdar"));
+
+class Dictionary {
+  constructor(input) {
+    this.trie = new Node();
+    for (let i = 0; i < input.length; i++) {
+      insertInTrie(input[i], this.trie);
+    }
+  }
+
+  isInDictionary(word) {
+    return search(word, this.trie);
+  }
+}
+
+let test = new Dictionary(["father", "mother", "son"]);
+console.log(test.trie);
+console.log(test.isInDictionary("father"));
+console.log(test.isInDictionary("faddther"));
