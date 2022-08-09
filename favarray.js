@@ -1,5 +1,8 @@
 let A = "3141592653589793238462643383279";
 
+//No match in fav array
+//A = "3144561592653589793238462643383279";
+
 let fav = [
   "314",
   "49",
@@ -29,7 +32,7 @@ function getMin(A, i, j, fav) {
     //console.log(A.substring(i, k + 1), fav.includes(A.substring(i, k + 1)));
     if (fav.includes(A.substring(i, k + 1))) {
       //take it or leave it
-      ans = Math.min(1 + getMin(A, k + 1, j, fav));
+      ans = Math.min(ans, 1 + getMin(A, k + 1, j, fav));
     }
   }
   return ans;
