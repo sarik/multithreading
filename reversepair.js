@@ -7,38 +7,43 @@ arr = [
 ];
 
 arr = [1, 3, 2, 3, 1];
-
 function merge(A, l, mid, r) {
-  let i = l;
-  let j = mid;
+  let p1 = l;
+  let p2 = mid;
 
   let C = [];
-
-  while (i < mid && j <= r) {
-    if (A[i] <= A[j]) {
-      C.push(A[i]);
-      i++;
+  while (p1 < mid && p2 <= r) {
+    if (A[p1] < A[p2]) {
+      C.push(A[p1]);
+      p1++;
     } else {
-      if (A[i] > A[j] * 2) ans += mid - 1 - i + 1;
-      C.push(A[j]);
-      j++;
+      if (A[p1] >= A[p2]) {
+        let temp = p1;
+        /* while (temp < mid) {
+                    if (A[temp] > A[p2] * 2)
+                        ans++
+                    temp++
+                } */
+        while (A[temp] < 2 * A[p2] && temp < mid) temp++;
+        ans += mid - 1 - temp + 1;
+      }
+      C.push(A[p2]);
+      p2++;
     }
   }
 
-  while (i < mid) {
-    C.push(A[i]);
-    i++;
-  }
-  while (j <= r) {
-    C.push(A[j]);
-    j++;
+  while (p1 < mid) {
+    C.push(A[p1]);
+    p1++;
   }
 
-  //return C
-  //console.log(C);
+  while (p1 < mid && p2 <= r) {
+    C.push(A[p2]);
+    p2++;
+  }
 
-  for (let z = 0; z < C.length; z++) {
-    A[l + z] = C[z];
+  for (let i = 0; i < C.length; i++) {
+    A[i + l] = C[i];
   }
 }
 
