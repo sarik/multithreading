@@ -19,7 +19,7 @@ function catalane(n) {
   return catalane[n];
 }
 
-let A = 4;
+let A = 2;
 
 console.log("********");
 console.log(catalane(A));
