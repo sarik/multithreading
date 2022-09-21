@@ -5,7 +5,7 @@ C = C.map(val => val * B)
 
 
 let left = Number.MIN_VALUE
-let right = 0
+let right //= 0
 
 for (let i = 0; i < C.length; i++) {
     left = Math.max(left, C[i])
