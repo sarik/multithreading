@@ -43,6 +43,8 @@ function secondMostChar(input) {
     console.log(keys)
     // console.log(largestChar)
     // console.log(secondLargestChar)
+    // console.log(largestCharCount)
+    // console.log(secondLargestCharCount)
     // console.log(keys)
 
 
@@ -54,16 +56,21 @@ function secondMostChar(input) {
         let currentChar = keys[i]
         let currentCharCount = charMapping.get(currentChar)
 
-        if (currentCharCount < secondLargestCharCount) {
-            console.log(keys[i], largestChar, secondLargestChar)
+        console.log(currentChar, currentCharCount, largestCharCount, secondLargestCharCount)
+
+        if (currentCharCount <= secondLargestCharCount) {
+            //console.log(keys[i], largestChar, secondLargestChar)
+            console.log("here for ", keys[i])
             continue
         }
 
+
         if (currentCharCount >= largestCharCount) {
-            largestChar = currentChar
-            largestCharCount = currentCharCount
             secondLargestChar = largestChar
             secondLargestCharCount = largestCharCount
+            largestChar = currentChar
+            largestCharCount = currentCharCount
+
 
         }
         else if (currentCharCount > secondLargestCharCount) {
@@ -73,8 +80,6 @@ function secondMostChar(input) {
         }
         console.log(keys[i], largestChar, secondLargestChar)
     }
-    //console.log(largestChar,secondLargestChar)
-    //console.log(secondLargestChar)
 
     return secondLargestChar
 
