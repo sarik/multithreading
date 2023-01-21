@@ -1,21 +1,4 @@
-function check(k, price, mid) {
-    let count = 1
-    let curr = price[0]
 
-    for (let i = 1; i < price.length; i++) {
-        if (price[i] - curr >= mid) {
-            count++
-            if (count === k) {
-                return true
-            }
-            curr = price[i]
-
-        }
-
-    }
-
-    return false
-}
 
 function maximumTastiness(price, k) {
 
@@ -46,6 +29,25 @@ function maximumTastiness(price, k) {
     }
 
     return ans
+
+    function check(k, price, mid) {
+        let count = 1
+        let curr = price[0]
+    
+        for (let i = 1; i < price.length; i++) {
+            if (price[i] - curr >= mid) {
+                count++
+                if (count === k) {
+                    return true
+                }
+                curr = price[i]
+    
+            }
+    
+        }
+    
+        return false
+    }
 
 
 
