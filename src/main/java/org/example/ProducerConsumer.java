@@ -23,7 +23,7 @@ class ProducerConsumerWorker {
                     System.out.println("Produced " + gonnaAdd);
                     notify();
                 }
-                Thread.sleep(1000);
+                Thread.sleep(800);
             }
 
         }
@@ -41,7 +41,7 @@ class ProducerConsumerWorker {
                     System.out.println("Consumed " + queue.remove(queue.size() - 1));
                     notify();
                 }
-                Thread.sleep(1000);
+                Thread.sleep(800);
             }
 
         }
